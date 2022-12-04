@@ -8,11 +8,11 @@ public class Scissors implements Choice {
     @Override
     public int getTotalPoints(Choice opponentChoice) {
         if (opponentChoice instanceof Rock){
-            return points + Choice.losingPoints;
+            return points + losingPoints;
         } else if (opponentChoice instanceof Scissors) {
-            return points + Choice.drawPoints;
+            return points + drawPoints;
         } else if (opponentChoice instanceof Paper) {
-            return points + Choice.winningPoints;
+            return points + winningPoints;
         }
         return 0;
 

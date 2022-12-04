@@ -17,10 +17,10 @@ public class Main {
                 String data = myReader.nextLine();
                 char[] splitS = data.toCharArray();
                 Choice opponentChoice = choiceFactory.getShape(splitS[0]);
-                System.out.println(splitS[2]);
                 Choice playerChoice = choiceFactory.getShape(splitS[2]);
                 totalPoints += playerChoice.getTotalPoints(opponentChoice);
             }
+            System.out.println(totalPoints);
 
             myReader.close();
         } catch (FileNotFoundException e) {

@@ -5,11 +5,9 @@ import models.Rock;
 import models.Scissors;
 
 public interface Choice {
-
-    public static int winningPoints = 6;
-    public static int drawPoints = 3;
-    public static int losingPoints = 0;
-    public int getTotalPoints(Choice choice);
-
+    public final int winningPoints = 6;
+    public final int drawPoints = 3;
+    public final int losingPoints = 0;
+    int getTotalPoints(Choice choice);
 
 }
