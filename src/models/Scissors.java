@@ -6,15 +6,15 @@ public class Scissors implements Choice {
     private final Integer points = 3;
 
     @Override
-    public int getTotalPoints(Choice choice) {
-        System.out.println(losingPoints);
-        if (choice instanceof Rock){
+    public int getTotalPoints(Choice opponentChoice) {
+        if (opponentChoice instanceof Rock){
             return points + Choice.losingPoints;
-        } else if (choice instanceof Scissors) {
+        } else if (opponentChoice instanceof Scissors) {
             return points + Choice.drawPoints;
-        } else if (choice instanceof Paper) {
+        } else if (opponentChoice instanceof Paper) {
             return points + Choice.winningPoints;
         }
         return 0;
+
     }
 }
