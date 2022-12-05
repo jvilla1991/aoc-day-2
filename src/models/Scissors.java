@@ -17,4 +17,19 @@ public class Scissors implements Choice {
         return 0;
 
     }
+
+    @Override
+    public Choice losesAgainst() {
+        return new Rock();
+    }
+
+    @Override
+    public Choice winsAgainst() {
+        return new Paper();
+    }
+
+    @Override
+    public Choice drawsAgainst() {
+        return new Scissors();
+    }
 }
